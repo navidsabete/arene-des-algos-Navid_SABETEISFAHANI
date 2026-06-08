@@ -29,3 +29,13 @@ Class 1 (benign) : 357 cases (62.74%)
 
 ### Phase 3: 1er classement des modèles
 Ayant utilisé le modèle de régression logistique, le programme a affiché un avertissement de non-convergence, car le nombre d'itérations par défaut (`max_iter=100`) est petit et le modèle s'arrête avant convergence. Il est donc nécessaire d'augmenter cette variable (jusqu'à >1000) pour pouvoir se rapprocher de la convergence souhaitée et obtenir une précision élevée.
+
+### Phase 4: Bascule non-supervisé
+
+```
+col_0    0    1
+row_0          
+0      130   82
+1        1  356
+```
+On remarque que la classe 1 (bénigne) est quasi entièrement regroupée dans un seul cluster alors que la classe 0 (maligne) est plus dispersée à travers les 2 clusters. Nous obtenons un score de correspondance à 49%, ce qui indique une correspondance partielle. Ce score montre qu'il existe une structure dans les données.
