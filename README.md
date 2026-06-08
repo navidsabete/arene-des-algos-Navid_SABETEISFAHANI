@@ -88,3 +88,8 @@ Gain modéré pour la **régression logistique**
 Aucun effet avec **l'arbre de décision**.
 
 Ces résultats confirment bien qu'un algo qui raisonne par distances n'a pas le même rapport aux échelles qu'un algo qui découpe par seuils.
+
+
+**Manche 2 : la triche**
+
+Le champion n'a gagné aucun point sur les deux datasets et la fuite des données n'a pas modifié l'accuracy.
