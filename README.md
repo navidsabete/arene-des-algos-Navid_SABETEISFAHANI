@@ -63,3 +63,16 @@ Le classement a changé. On constate que le KNN est moins performant sur ce nouv
 La fonction `arene` encaisse également un dataset à 3 classes sans modification nécessaire aux fonctions d'exploration, d'entraînement, d'évaluation, de prédiction, de comparaison.
 
 Les résultats d'exploration du dataset montre qu'une classe peut être moins représentée que les autres à travers l'affichage des pourcentages.
+
+### Phase 6 : Voir pour comprendre (graphiques)
+
+Le graphique est bien lisible grâce au titre et axes X et Y nommées pour montrer les indicateurs d'analyse.
+
+Le champion s'est trompé plus dans le sens "Prédit Bénigne --> Réel Maligne" avec 3 erreurs par rapport à 1 erreur "Prédit Maligne --> Réel Bénigne".
+Pour le wine, il n'y a eu qu'un seul cas d'erreur.
+
+Sur le cancer du sein, dans le contexte médical, la situation la plus grave est d'obtenir un faux négatif (tumeur maligne --> prédite bénigne) car cela indique que le patient est rassuré alors qu'il est malade. Un faux positif (tumeur bénigne --> prédite maligne) peut être source de stress dû à des examents non urgents, même si c'est souvent moins grave qu'un faux négatif.
+
+Ainsi, l'accuracy seule (même élevée) ne suffit pas à évaluer un modèle car le résultat du modèle peut avoir des conséquences différentes (faux positifs/négatifs).
+
+La matrice de confusion était plus informative qu'une simple accuracy.
