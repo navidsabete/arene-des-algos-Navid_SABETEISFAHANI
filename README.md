@@ -6,7 +6,7 @@ Objectif : monter un pipeline de Machine Learning (ML) sur un ou plusieurs datas
 ### Phase 1: Chargement et exploration du dataset
 Dataset utilisé : *load_breast_cancer* de `sklearn`
 
-Test de fonction sur 3 situations: 
+Étude de 3 situations: 
 - Cas normal: 
 ```
 Lignes, colonnes : (569, 30)
