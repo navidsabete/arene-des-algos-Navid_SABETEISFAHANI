@@ -26,3 +26,6 @@ Lignes, colonnes : (569, 30)
 Class 0 (malignant) : 212 cases (37.26%)
 Class 1 (benign) : 357 cases (62.74%)
 ```
+
+### Phase 3: 1er classement des modèles
+Ayant utilisé le modèle de régression logistique, le programme a affiché un avertissement de non-convergence, car le nombre d'itérations par défaut (`max_iter=100`) est petit et le modèle s'arrête avant convergence. Il est donc nécessaire d'augmenter cette variable (jusqu'à >1000) pour pouvoir se rapprocher de la convergence souhaitée et obtenir une précision élevée.
