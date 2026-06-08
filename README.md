@@ -64,7 +64,7 @@ La fonction `arene` encaisse également un dataset à 3 classes sans modificatio
 
 Les résultats d'exploration du dataset montre qu'une classe peut être moins représentée que les autres à travers l'affichage des pourcentages.
 
-### Phase 6 : Voir pour comprendre (graphiques)
+### Phase 6: Voir pour comprendre (graphiques)
 
 Le graphique est bien lisible grâce au titre et axes X et Y nommées pour montrer les indicateurs d'analyse.
 
@@ -76,3 +76,15 @@ Sur le cancer du sein, dans le contexte médical, la situation la plus grave est
 Ainsi, l'accuracy seule (même élevée) ne suffit pas à évaluer un modèle car le résultat du modèle peut avoir des conséquences différentes (faux positifs/négatifs).
 
 La matrice de confusion était plus informative qu'une simple accuracy.
+
+### Phase 7: Le buff scaling (et la triche qui se retourne contre vous)
+
+**Manche 1 : le buff**
+
+Qui profite du buff ? **KNN : fort gain**, notamment sur le *wine_dataset*
+
+Gain modéré pour la **régression logistique**
+
+Aucun effet avec **l'arbre de décision**.
+
+Ces résultats confirment bien qu'un algo qui raisonne par distances n'a pas le même rapport aux échelles qu'un algo qui découpe par seuils.
