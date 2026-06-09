@@ -34,3 +34,11 @@ L'application de la méthode IQR ne détecte aucun outlier sur les variables num
 ### Phase 5 : Corrélations et chasse à la multicolinéarité
 
 L'analyse du VIF montre une multicolinéarité importante entre TotalCharges, tenure et MonthlyCharges. TotalCharges est redondant avec les autres variables car il combine `TotalCharges ≈ tenure × MonthlyCharges` et apporte peu d'information indépendante. La duplication volontaire confirme que le VIF tend vers l'infini. Après suppression de TotalCharges, les VIF des variables restantes deviennent faibles (~2.6), indiquant une structure plus stable pour les modèles linéaires.
+
+### Phase 6 : Les variables qui prédisent vraiment le churn
+
+Les deux méthodes (corrélation à la cible et importance via un Random Forest) sont en accord sur le podium concernant les top features stables dont tenure et Contrat qui dominent. Cela confirme leur rôle central dans le churn. Cependant, certaines variables comme TotalCharges présentent une forte importance dans la Random Forest mais une corrélation plus faible avec la cible, ce qui indique des relations non linéaires ou des effets d'interaction que la corrélation linéaire ne capture pas.
+
+- Contract court → churn élevé
+- nouveaux clients → churn élevé
+- charges élevées → churn plus probable
