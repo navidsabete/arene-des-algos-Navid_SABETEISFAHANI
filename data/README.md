@@ -42,3 +42,8 @@ Les deux méthodes (corrélation à la cible et importance via un Random Forest)
 - Contract court → churn élevé
 - nouveaux clients → churn élevé
 - charges élevées → churn plus probable
+
+
+### Phase 7 : Split, scaling, et le grand piège de la fuite
+
+La démonstration de fuite de données avec un StandardScaler n'a montré aucun écart (accuracy de 80,70 % dans les deux cas)
