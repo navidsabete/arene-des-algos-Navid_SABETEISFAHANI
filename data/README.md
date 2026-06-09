@@ -30,3 +30,7 @@ client, le One-Hot créera quand même une colonne entière pour un seul client,
 ### Phase 4 : Traiter les valeurs aberrantes
 
 L'application de la méthode IQR ne détecte aucun outlier sur les variables numériques. Cela s'explique par le fait que les distributions sont naturellement étendues et cohérentes avec le domaine métier. Les valeurs élevées de TotalCharges ne sont pas des anomalies mais correspondent à des clients avec une longue durée d’abonnement et des factures élevées. Par conséquent, il convient de garder chacune de ces colonnes, afin de préserver l'information utile pour la prédiction du churn. Le plafonnement et la suppression ne sont pas nécessaires dans ce cas précis.
+
+### Phase 5 : Corrélations et chasse à la multicolinéarité
+
+L'analyse du VIF montre une multicolinéarité importante entre TotalCharges, tenure et MonthlyCharges. TotalCharges est redondant avec les autres variables car il combine `TotalCharges ≈ tenure × MonthlyCharges` et apporte peu d'information indépendante. La duplication volontaire confirme que le VIF tend vers l'infini. Après suppression de TotalCharges, les VIF des variables restantes deviennent faibles (~2.6), indiquant une structure plus stable pour les modèles linéaires.
