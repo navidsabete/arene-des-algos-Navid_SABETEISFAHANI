@@ -26,3 +26,7 @@ Si la colonne contient une catégorie ultra-rare présente sur 1 seul
 client, le One-Hot créera quand même une colonne entière pour un seul client, ce qui provoquera une augmentation de la dimension du dataset.
 
 `customerID` possède presque autant de modalités que de lignes (7043 identifiants uniques pour 7043 clients). Si l'on encode par erreur `customerID`, le One-Hot créera donc plusieurs milliers de colonnes supplémentaires. Le dataset est passé de 21 colonnes à 6572 colonnes, ce qui illustre le phénomène d'explosion de dimensions. `customerID` doit être supprimé avant l'encodage.
+
+### Phase 4 : Traiter les valeurs aberrantes
+
+L'application de la méthode IQR ne détecte aucun outlier sur les variables numériques. Cela s'explique par le fait que les distributions sont naturellement étendues et cohérentes avec le domaine métier. Les valeurs élevées de TotalCharges ne sont pas des anomalies mais correspondent à des clients avec une longue durée d’abonnement et des factures élevées. Par conséquent, il convient de garder chacune de ces colonnes, afin de préserver l'information utile pour la prédiction du churn. Le plafonnement et la suppression ne sont pas nécessaires dans ce cas précis.
