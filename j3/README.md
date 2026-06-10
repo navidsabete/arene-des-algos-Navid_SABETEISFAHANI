@@ -15,3 +15,13 @@ L'introduction d'une annonce à 100 000 € perturbe fortement le clustering. Un
 Dataset : *SMS Spam Collection (UCI)*
 
 La régression logistique obtient les meilleures performances avec un F1-score `spam` de 0.89 contre 0.83 pour Naive Bayes. Les deux modèles affichent une précision de 100 %, ce qui signifie qu'ils génèrent très peu de faux positifs. En revanche, leur rappel reste inférieur à 85 %, ce qui indique que certains spams passent encore au travers du filtre. Le cas du message vide montre que les modèles reviennent naturellement à la classe majoritaire lorsqu'ils ne disposent d'aucune information. Enfin, un spam déguisé utilisant un vocabulaire proche des messages normaux peut tromper le modèle.
+
+### Phase D : Décrypter les signaux d'un sonar (classification binaire)
+
+Dataset : *Sonar / Connectionist Bench (Mines vs Rocks), UCI*
+
+Le SVM RBF obtient les meilleures performances. La régression logistique est correcte. Le Random Forest reste compétitif mais légèrement en retrait.
+
+Sans standardisation, les performances du SVM et de la régression logistique diminuent. Le Random Forest est beaucoup moins affecté et robuste aux modifications d'échelles.
+
+Lorsque toutes les entrées du signal sont nulles, les trois modèles produisent malgré tout une prédiction avec une certaine confiance, alors qu’un tel signal correspond en réalité à une panne de capteur. En pratique, un système sonar devrait d’abord inclure un module de détection d’anomalies ou de validation du signal avant toute classification.
