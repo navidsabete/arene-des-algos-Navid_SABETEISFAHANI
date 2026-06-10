@@ -9,3 +9,9 @@ Sur le cas limite (100 observations), les performances de la régression linéai
 Sans standardisation, les segments sont principalement déterminés par les variables ayant la plus grande échelle, notamment le prix. Le clustering perd alors sa capacité à exploiter l'ensemble des caractéristiques des annonces.
 
 L'introduction d'une annonce à 100 000 € perturbe fortement le clustering. Une seule valeur aberrante peut donc dégrader la qualité de l'ensemble de la segmentation. Ce résultat confirme que le nettoyage du J2 est un pré-requis.
+
+### Phase C : Courriel vs spam (texte)
+
+Dataset : *SMS Spam Collection (UCI)*
+
+La régression logistique obtient les meilleures performances avec un F1-score `spam` de 0.89 contre 0.83 pour Naive Bayes. Les deux modèles affichent une précision de 100 %, ce qui signifie qu'ils génèrent très peu de faux positifs. En revanche, leur rappel reste inférieur à 85 %, ce qui indique que certains spams passent encore au travers du filtre. Le cas du message vide montre que les modèles reviennent naturellement à la classe majoritaire lorsqu'ils ne disposent d'aucune information. Enfin, un spam déguisé utilisant un vocabulaire proche des messages normaux peut tromper le modèle.
