@@ -24,4 +24,9 @@ Le SVM RBF obtient les meilleures performances. La régression logistique est co
 
 Sans standardisation, les performances du SVM et de la régression logistique diminuent. Le Random Forest est beaucoup moins affecté et robuste aux modifications d'échelles.
 
-Lorsque toutes les entrées du signal sont nulles, les trois modèles produisent malgré tout une prédiction avec une certaine confiance, alors qu’un tel signal correspond en réalité à une panne de capteur. En pratique, un système sonar devrait d’abord inclure un module de détection d’anomalies ou de validation du signal avant toute classification.
+Lorsque toutes les entrées du signal sont nulles, les trois modèles produisent malgré tout une prédiction avec une certaine confiance, alors qu'un tel signal correspond en réalité à une panne de capteur. En pratique, un système sonar devrait d’abord inclure un module de détection d'anomalies ou de validation du signal avant toute classification.
+
+
+### Phase E : Le Fight des IA (ouverte)
+
+Le Fight des IA montre qu'il n'existe pas de modèle universellement meilleur. Le classement dépend fortement du type de données et de la métrique choisie. Sur Sonar, le SVM RBF domine tandis que sur le dataset Spam, le classement change avec des modèles optimisés pour le rappel. Enfin, sur Airbnb, le problème n'est plus supervisé et la qualité est évaluée par le score de silhouette, qui suggère ici une segmentation naturelle en six groupes. Les temps d'entraînement rappellent également qu'un modèle légèrement meilleur n'est pas toujours le meilleur choix opérationnel.
