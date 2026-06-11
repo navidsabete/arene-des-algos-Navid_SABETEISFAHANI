@@ -13,3 +13,12 @@ Les résultats montrent que les performances moyennes sont relativement stables 
 ### Phase 3 : La validation croisée k-fold
 
 La validation croisée permet d'estimer la performance moyenne d'un modèle. La stratification a un impact variable selon les modèles et la distribution des données. Sur ce dataset relativement équilibré à grande échelle, l'effet reste limité, mais elle reste essentielle pour garantir la représentativité des folds.
+
+
+### Phase 4 : Choisir la bonne métrique selon le coût métier
+
+Les modèles avec meilleure accuracy ne sont pas forcément les meilleurs en coût métier. Ici, Logistic Regression et Random Forest dominent car ils minimisent les faux négatifs, qui sont critiques en diagnostic médical.
+
+Un modèle peut atteindre un recall parfait en prédisant systématiquement la classe positive, mais cela entraîne un nombre élevé de faux positifs et un coût opérationnel important.
+
+L'évaluation doit donc intégrer les coûts des erreurs et non uniquement les métriques globales.
