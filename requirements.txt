@@ -7,3 +7,8 @@ matplotlib
 seaborn
 statsmodels
 pytest
+tensorflow
+joblib
+flask
+streamlit
+gradio
