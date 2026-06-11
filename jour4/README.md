@@ -9,3 +9,7 @@ La stratification permet de conserver la distribution des classes dans les ensem
 ### Phase 2 : Bootstrap et bagging, comprendre le rééchantillonnage
 
 Les résultats montrent que les performances moyennes sont relativement stables entre les modèles, mais que l'écart-type devient un indicateur de robustesse. L'oubli de remplacement ne change pas fortement les scores dans ce dataset. Enfin, un nombre d’itérations trop faible (n=1) empêche toute estimation fiable de l'écart-type.
+
+### Phase 3 : La validation croisée k-fold
+
+La validation croisée permet d'estimer la performance moyenne d'un modèle. La stratification a un impact variable selon les modèles et la distribution des données. Sur ce dataset relativement équilibré à grande échelle, l'effet reste limité, mais elle reste essentielle pour garantir la représentativité des folds.
