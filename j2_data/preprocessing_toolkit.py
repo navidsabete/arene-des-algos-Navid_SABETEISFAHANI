@@ -266,6 +266,18 @@ def split_et_scale_proprement(X, y):
     X_test_scaled = scaler.transform(X_test)
     return X_train_scaled, X_test_scaled, y_train, y_test
 
+def split_et_scale_proprement_sans_stratify(X, y):
+    X_train, X_test, y_train, y_test = train_test_split(
+        X,
+        y,
+        test_size=0.2,
+        random_state=42,
+    )
+    scaler = StandardScaler()
+    X_train_scaled = scaler.fit_transform(X_train)
+    X_test_scaled = scaler.transform(X_test)
+    return X_train_scaled, X_test_scaled, y_train, y_test
+
 
 def comparer_fuite(X, y):
     X_train_scaled, X_test_scaled, y_train, y_test = split_et_scale_proprement(X, y)
