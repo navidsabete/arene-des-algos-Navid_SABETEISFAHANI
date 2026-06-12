@@ -22,3 +22,7 @@ Les modèles avec meilleure accuracy ne sont pas forcément les meilleurs en co�
 Un modèle peut atteindre un recall parfait en prédisant systématiquement la classe positive, mais cela entraîne un nombre élevé de faux positifs et un coût opérationnel important.
 
 L'évaluation doit donc intégrer les coûts des erreurs et non uniquement les métriques globales.
+
+### Phase 5 : Sérialiser le modèle et le servir derrière une API
+
+Les cas limites et adversariaux sont correctement gérés. Une requête sans la clé *features* renvoie une erreur HTTP 400 explicite. Une requête avec un nombre incorrect de variables est également rejetée avant l'appel au modèle. Les validations empêchent le modèle de recevoir des données incohérentes.
