@@ -26,3 +26,7 @@ L'évaluation doit donc intégrer les coûts des erreurs et non uniquement les m
 ### Phase 5 : Sérialiser le modèle et le servir derrière une API
 
 Les cas limites et adversariaux sont correctement gérés. Une requête sans la clé *features* renvoie une erreur HTTP 400 explicite. Une requête avec un nombre incorrect de variables est également rejetée avant l'appel au modèle. Les validations empêchent le modèle de recevoir des données incohérentes.
+
+### Phase 6 : Déployer une WebApp de prédiction
+
+La WebApp permet à un utilisateur de saisir les caractéristiques d'une tumeur et d'obtenir instantanément une prédiction ainsi que le niveau de confiance du modèle.
